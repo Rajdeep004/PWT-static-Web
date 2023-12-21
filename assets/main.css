@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: "BebasNeue";
+  src: url("./fonts/BebasNeue-Regular.ttf") format("ttf");
+}
+:root {
+  @apply text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px];
+}
+
+body {
+  @apply box-border bg-bkg;
+  /* font-family: "BebasNeue","Poppins", sans-serif; */
+}
+
+.btn {
+  @apply h-12 w-44 rounded-md border-2 bg-primary text-white transition-colors delay-[80ms] hover:border-primary hover:bg-bkg hover:text-primary;
+}
+.iconn {
+  @apply text-lg text-gray-500 hover:text-gray-900 dark:hover:text-white md:text-2xl;
+}
+
+.h1 {
+  @apply text-5xl font-extrabold dark:text-white;
+}
+
+.h2 {
+  @apply text-4xl font-bold dark:text-white;
+}
+
+.h3 {
+  @apply text-3xl font-bold dark:text-white;
+}
+
+.h4 {
+  @apply text-2xl font-bold dark:text-white;
+}
+
+.h5 {
+  @apply text-xl font-bold dark:text-white;
+}
+
+.h6 {
+  @apply text-lg font-bold dark:text-white;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "pte-with-tejal",
+  "private": true,
+  "version": "0.0.0",
+  "author": {
+    "name": "Rajdeep Barot",
+    "email": "rajdeepbarot23@gmail.com",
+    "url": "https://github.com/Rajdeep004"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rajdeep004/PTE-with-Tejal.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "daisyui": "^3.9.4",
+    "nuxt": "^3.7.4",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "nuxt-icon": "^0.5.0"
+  }
+}
