@@ -31,6 +31,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "googleapis": "^129.0.0",
     "nuxt-icon": "^0.5.0"
   }
 }
