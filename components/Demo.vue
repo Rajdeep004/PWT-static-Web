@@ -42,7 +42,7 @@ const submitForm = async () => {
   >
     <form
       @submit.prevent="submitForm"
-      class="flex flex-col items-baseline gap-4 md:flex-row scale-90"
+      class="flex flex-col items-baseline gap-4 md:flex-row md:scale-90"
     > <h2 class="text-4xl font-bold text-bkg">Book a  Demo Class</h2>
       <fieldset>
         <legend>Full Name</legend>

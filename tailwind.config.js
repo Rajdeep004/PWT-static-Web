@@ -8,7 +8,9 @@ module.exports = {
     "./app.vue",
     "./error.vue"
   ],
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui")
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -30,7 +32,8 @@ module.exports = {
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
     utils: true, // adds responsive and modifier utility classes
-    prefix: "di", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    // prefix: "di", 
+    // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
   },
 };
