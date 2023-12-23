@@ -2,7 +2,7 @@
   <div class="space-y-10 bg-white p-8">
     <div class="text-center">
       <h1 class="mb-4 text-4xl font-bold">10+ Years Experince</h1>
-      <span class="text-5xl font-extrabold text-orange-500">The Leader</span>
+      <span class="text-5xl font-extrabold text-accent">The Leader</span>
     </div>
     <div class="flex justify-between">
       <div class="step-card">
