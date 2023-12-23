@@ -54,12 +54,12 @@ const faqs = [
       <div v-for="faq in faqs" :key="faq.question" class="h4 transition-all flex flex-col gap-4">
         <Disclosure v-slot="{ open }">
           <DisclosureButton
-            class="flex w-full justify-between rounded-lg bg-[#dbe3f0] px-4 py-2 text-left text-sm font-medium text-primary hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-primary/75">
+            class="flex w-full justify-between rounded-lg bg-[#dbe3f0] px-4 py-2 text-left text-sm font-medium text-primary hover:bg-[#b7c6e1] focus:outline-none focus-visible:ring focus-visible:ring-primary/75">
             <span>{{ faq.question }}</span>
             <Icon name="material-symbols:keyboard-arrow-up-rounded" :class="open ? 'rotate-180 transform' : ''"
-              class="h-5 w-5 text-purple-500" />
+              class="h-5 w-5 text-[#4b72b4]" />
           </DisclosureButton>
-          <DisclosurePanel class="px-4 pb-2 pt-4 text-sm text-gray-500">
+          <DisclosurePanel class="px-4 pb-2 pt-4 font-normal text-sm text-text rounded-lg bg-[#edf1f7]">
             {{ faq.answer }}
           </DisclosurePanel>
         </Disclosure>
