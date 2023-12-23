@@ -17,7 +17,7 @@ const isOpens = ref([false, false, false])
 <template>
     <section id="blog" class="grid grid-cols-1 md:grid-cols-3 gap-2 p-4 container mx-auto">
         <div v-for="(item,index) in blogitems" :key="item.id" class="col-span-1">
-            <div class="card w-96 glass">
+            <div class="card sm:w-96 glass gap-4">
                 <figure><img src="/img/bluegirl.jpg" alt="PTE Master Course" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">{{ item.title }}</h2>

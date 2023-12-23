@@ -1,7 +1,7 @@
 <template>
-  <div class="flex w-full space-x-8">
+  <div class="flex flex-col sm:flex-row gap-4 w-3/4">
     <!-- Teacher Section -->
-    <div class="flex flex-1 items-center rounded-lg bg-white p-8 shadow-lg">
+    <div class="flex  flex-1 items-center rounded-lg bg-white p-8 shadow-lg">
       <div class="flex-1 space-y-4">
         <h2 class="text-4xl font-bold">Book PTE Class</h2>
         <!-- <div class="text-3xl font-bold">Faculties</div> -->

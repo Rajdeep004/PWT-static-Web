@@ -4,7 +4,7 @@
       <h1 class="mb-4 text-4xl font-bold">10+ Years Experince</h1>
       <span class="text-5xl font-extrabold text-accent">The Leader</span>
     </div>
-    <div class="flex justify-between">
+    <div class="flex flex-col sm:flex-row justify-between">
       <div class="step-card">
         <div class="step-icon">
           <Icon name="fa6-solid:1" class="text-4xl" />
@@ -60,7 +60,7 @@
 
 <style scoped lang="postcss">
 .step-card {
-  @apply flex w-[30%] flex-col items-center space-y-2;
+  @apply flex w-3/4 sm:w-[30%] flex-col items-center justify-center space-y-2 mx-auto gap-4;
 }
 
 .step-icon {
