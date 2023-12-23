@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 * {
   @apply text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px];
@@ -9,11 +9,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.btn {
-  @apply h-12 w-44 rounded-md border-2 bg-primary text-white transition-colors delay-[80ms] hover:border-primary hover:bg-bkg hover:text-primary;
+.btn-primary {
+  @apply h-12 w-24 rounded-md border-2 bg-primary text-white transition-colors delay-[80ms] hover:border-primary hover:bg-bkg hover:text-primary border-white;
 }
 .btn-white {
-  @apply h-12 w-44 rounded-md border-2 bg-primary text-white transition-colors delay-[80ms] hover:border-primary hover:bg-bkg hover:text-primary;
+  @apply h-12 w-24 rounded-md border-2 bg-bkg text-accent hover:bg-accent hover:text-bkg transition-colors delay-[80ms];
 }
 .iconn {
   @apply text-lg text-gray-500 hover:text-gray-900 dark:hover:text-white md:text-2xl;

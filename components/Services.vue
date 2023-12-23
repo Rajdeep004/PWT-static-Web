@@ -51,7 +51,7 @@ const items = ref([
 <template>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     <h2 class="mb-6 text-5xl font-bold text-primary flex flex-col justify-center items-center">
-      Services at <div class="text-accent">PTE with Tejal</div>
+      Services at <div class="text-accent h2">PTE with Tejal</div>
     </h2>
     <div
       v-for="item in items"

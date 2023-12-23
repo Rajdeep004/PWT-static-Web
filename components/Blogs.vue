@@ -18,7 +18,7 @@ const posts = ref([
 
 <template>
   <div>
-    <h1 class="h1 mb-4 text-primary">Explore <div class="text-accent">Latest Insights</div></h1>
+    <h1 class="h1 mb-4 text-primary">Explore <div class="text-accent h1">Latest Insights</div></h1>
     <div class="parent">
       <div class="div1 card bg-blue-200"><div class="content"></div></div>
       <div class="div2 card bg-pink-200"><div class="content"></div></div>

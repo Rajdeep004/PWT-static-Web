@@ -14,7 +14,7 @@
           <h1 class="text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">PTE Master Class</h1>
           <p class="mt-6 text-lg leading-8 text-gray-600">Are you ready to conquer the PTE exam and unlock endless opportunities for your future? Look no further! PTE with Tejal is here to guide you through your journey to achieving your dream scores in the Pearson Test of English (PTE). </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Get started</a>
+            <a href="#" class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Get started</a>
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </div>
