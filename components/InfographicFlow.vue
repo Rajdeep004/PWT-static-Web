@@ -34,6 +34,26 @@
           Learn through NRICH Live integrated with Learning Management System...
         </p>
       </div>
+
+    </div>
+    <div class="stats shadow container mt-8">
+      <div class="stat place-items-center">
+        <div class="stat-title">Downloads</div>
+        <div class="stat-value text-primary">31K</div>
+        <div class="stat-desc">From January 1st to February 1st</div>
+      </div>
+
+      <div class="stat place-items-center">
+        <div class="stat-title">Users</div>
+        <div class="stat-value text-accent">4,200</div>
+        <div class="stat-desc text-accent">↗︎ 40 (2%)</div>
+      </div>
+
+      <div class="stat place-items-center">
+        <div class="stat-title">New Registers</div>
+        <div class="stat-value text-primary">1,200</div>
+        <div class="stat-desc">↘︎ 90 (14%)</div>
+      </div>
     </div>
   </div>
 </template>

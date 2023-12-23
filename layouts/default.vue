@@ -1,21 +1,78 @@
 <script setup>
+import { ref } from 'vue'
+import { Dialog, DialogPanel } from '@headlessui/vue'
 
+const navigation = [
+  { name: 'Courses', href: '#' },
+  { name: 'About PTE', href: '#' },
+  { name: 'Our Achivements', href: '#' },
+  { name: 'Company', href: '#' },
+]
+
+const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <nav class="container my-4 flex items-baseline justify-between border-gray-200 px-4 py-2.5 lg:px-6">
       <img src="/img/pwt logo.png" class="mr-3 h-8 sm:h-16" alt="PWT Logo" />
-      <button class="btn">Login</button>
+      <a href="https://practice.ptewithtejal.com/">
+      <button class="btn">Login</button></a>
     </nav>
-  </header>
-
+  </header> -->
+  <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 sm:h-10 w-auto" src="/img/pwt logo.png" alt="" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
+            <span class="sr-only">Open main menu</span>
+            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="https://practice.ptewithtejal.com/" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+        <div class="fixed inset-0 z-50" />
+        <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-12 w-auto" src="/img/pwt logo.png" alt="" />
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+              <span class="sr-only">Close menu</span>
+              <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+              </div>
+            </div>
+          </div>
+        </DialogPanel>
+      </Dialog>
+    </header>
   <div>
     <slot />
   </div>
 
-  <footer class="bg-slate-50">
-    <div class="footer p-10 text-base-content container">
+  <footer class="bg-primary text-bkg">
+    <div class="footer p-10  container">
       <nav class="">
         <header class="footer-title">Services</header>
         <a class="link link-hover">Branding</a>
@@ -40,30 +97,27 @@
         <header class="footer-title">Newsletter</header>
         <fieldset class="form-control w-80">
           <label class="label">
-            <span class="label-text">Enter your email address</span>
+            <span class="">Enter your email address</span>
           </label>
           <div class="join">
             <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
-            <button class="btn btn-primary join-item">Subscribe</button>
+            <button class="h-12 w-24 bg-bkg text-accent  hover:bg-accent border-l-2 hover:text-bkg join-item">Subscribe</button>
           </div>
         </fieldset>
         <header class="footer-title">Social</header>
-        <div class="grid grid-flow-col gap-4 text-slate-400">
-          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-              <path
-                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-              </path>
-            </svg></a>
-          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-              <path
-                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
-              </path>
-            </svg></a>
-        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path
-              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
-            </path>
-          </svg></a>
+        <div class="grid grid-flow-col gap-4 text-bkg">
+          <a href="https://www.instagram.com/ptewithtejal/?hl=en" target="_blank" rel="noopener noreferrer">
+            <Icon name="line-md:instagram" class="text-[1.5rem]" />
+          </a>
+          <a href="https://www.facebook.com/ptewithtejal/" target="_blank" rel="noopener noreferrer">
+            <Icon name="line-md:facebook" class="text-[1.5rem]" />
+          </a>
+          <a href="https://www.youtube.com/@ptewithtejal" target="_blank" rel="noopener noreferrer">
+            <Icon name="line-md:youtube" class="text-[1.5rem]" />
+          </a>
+          <a href="" rel="noopener noreferrer">
+            <Icon name="line-md:linkedin" class="text-[1.5rem]" />
+          </a>
       </div>
     </form>
   </div>

@@ -57,7 +57,7 @@ const faqs = [
         <details class="details details-primary">
           <summary>{{ faq.question }}</summary>
           <div class="mt-2 text-gray-600">
-            {{ faq.answer }}
+            {{ faq.answer }} 
           </div>
         </details>
       </div>

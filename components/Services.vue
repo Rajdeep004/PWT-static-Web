@@ -28,7 +28,7 @@ const items = ref([
     icon: "/img/services/Templates.svg",
   },
   {
-    title: "PTE Analysis",
+    title: "PTE Test Format",
     description:
       "Social Media is not a distraction, it is a learning experience.",
     icon: "/img/services/PTE Analysis.svg",

@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@font-face {
-  font-family: "BebasNeue";
-  src: url("./fonts/BebasNeue-Regular.ttf") format("ttf");
-}
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
   @apply text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px];
 }
 
 body {
   @apply box-border bg-bkg;
-  /* font-family: "BebasNeue","Poppins", sans-serif; */
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn {
+  @apply h-12 w-44 rounded-md border-2 bg-primary text-white transition-colors delay-[80ms] hover:border-primary hover:bg-bkg hover:text-primary;
+}
+.btn-white {
   @apply h-12 w-44 rounded-md border-2 bg-primary text-white transition-colors delay-[80ms] hover:border-primary hover:bg-bkg hover:text-primary;
 }
 .iconn {
