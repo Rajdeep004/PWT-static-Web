@@ -9,9 +9,7 @@
             <div class="card-body">
                 <h2 class="card-title">PTE Master Course</h2>
                 <p>How to park your car at your garage? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et
-                    similique accusantium commodi necessitatibus, labore vel debitis veritatis quaerat recusandae,
-                    exercitationem voluptate magni dolor? Debitis doloribus perspiciatis, necessitatibus architecto sequi
-                    amet!</p>
+                   </p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-primary">Learn now!</button>
                 </div>
@@ -22,9 +20,7 @@
             <div class="card-body">
                 <h2 class="card-title">PTE Voucher</h2>
                 <p>How to park your car at your garage? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et
-                    similique accusantium commodi necessitatibus, labore vel debitis veritatis quaerat recusandae,
-                    exercitationem voluptate magni dolor? Debitis doloribus perspiciatis, necessitatibus architecto sequi
-                    amet!</p>
+                    </p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-primary">Learn now!</button>
                 </div>
