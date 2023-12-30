@@ -7,7 +7,7 @@
       <div class="mx-auto max-w-2xl flex-col flex justify-center item center">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Announcing our next round of funding. <a href="#" class="font-semibold text-primary"><span class="absolute inset-0" aria-hidden="true" />Read more <span aria-hidden="true">&rarr;</span></a>
+            Announcing our next Batch of PTE Master Class. <a href="#" class="font-semibold text-primary"><span class="absolute inset-0" aria-hidden="true" />Read more <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
         <div class="text-center">
@@ -15,7 +15,7 @@
           <p class="mt-6 text-lg leading-8 text-gray-600">Are you ready to conquer the PTE exam and unlock endless opportunities for your future? Look no further! PTE with Tejal is here to guide you through your journey to achieving your dream scores in the Pearson Test of English (PTE). </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="#" class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Get started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+            <a href="#democlass" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>

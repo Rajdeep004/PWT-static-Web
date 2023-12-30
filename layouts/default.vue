@@ -1,15 +1,15 @@
 <script setup>
-import { ref } from 'vue'
-import { Dialog, DialogPanel } from '@headlessui/vue'
+  import { ref } from 'vue'
+  import { Dialog, DialogPanel } from '@headlessui/vue'
 
-const navigation = [
-  { name: 'Courses', href: '#' },
-  { name: 'About PTE', href: '#' },
-  { name: 'Our Achivements', href: '#' },
-  { name: 'Company', href: '#' },
-]
+  const navigation = [
+    { name: 'Courses', href: '#' },
+    { name: 'About PTE', href: '#' },
+    { name: 'Our Achivements', href: '#' },
+    { name: 'Company', href: '#' },
+  ]
 
-const mobileMenuOpen = ref(false)
+  const mobileMenuOpen = ref(false)
 </script>
 
 <template>

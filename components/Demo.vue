@@ -16,7 +16,7 @@ const city = ref("");
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-around gap-4 py-28 bg-primary md:flex-row ">
+  <div class="flex flex-col items-center justify-around gap-4 py-28 bg-primary md:flex-row " id="democlass">
     <form @submit.prevent="submitForm" class="flex flex-col items-baseline gap-4 md:flex-row md:scale-90">
       <h2 class="text-4xl font-bold text-bkg">Book a Demo Class</h2>
       <fieldset>
