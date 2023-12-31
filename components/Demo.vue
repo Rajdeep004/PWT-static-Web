@@ -1,18 +1,13 @@
 <script setup>
-import { ref } from "vue";
 const formData = {
   fullName: "",
   contactNumber: "",
   emailId: "",
   city: "",
 }
-const fullName = ref("");
-const contactNumber = ref("");
-const emailId = ref("");
-const city = ref("");
+
 // const courses = ref(["Course 1"]); 
 // Add or fetch the list of courses as needed
-
 </script>
 
 <template>
@@ -21,20 +16,20 @@ const city = ref("");
       <h2 class="text-4xl font-bold text-bkg">Book a Demo Class</h2>
       <fieldset>
         <legend>Full Name</legend>
-        <input v-model="fullName" type="text" placeholder="Full Name" required class="rounded bg-white p-2" />
+        <input v-model="formData.fullName" type="text" placeholder="Full Name" required class="rounded bg-white p-2" />
       </fieldset>
       <fieldset>
         <legend>Contact Number</legend>
-        <input v-model="contactNumber" type="tel" placeholder="98765 43210" required class="rounded bg-white p-2" />
+        <input v-model="formData.contactNumber" type="tel" placeholder="98765 43210" required class="rounded bg-white p-2" />
       </fieldset>
       <fieldset>
         <legend>Email Address</legend>
-        <input v-model="emailId" type="email" placeholder="ptewithtejal@gmail.com" required
+        <input v-model="formData.emailId" type="email" placeholder="ptewithtejal@gmail.com" required
           class="rounded bg-white p-2" />
       </fieldset>
       <fieldset>
         <legend>City</legend>
-        <input v-model="city" type="text" placeholder="Unjha" required class="rounded bg-white p-2" />
+        <input v-model="formData.city" type="text" placeholder="Unjha" required class="rounded bg-white p-2" />
       </fieldset>
       <!-- <fieldset>
         <legend>Select Cousre</legend>
@@ -51,65 +46,6 @@ const city = ref("");
     </form>
   </div>
 </template>
-
-<script>
-// import {google} from 'googleapis'
-
-// const { google } = require('googleapis')
-// const submitForm = async () => {
-//   const auth = new google.auth.GoogleAuth({
-//     keyFile: "../credentials.json",
-//     scopes: "https://www.googleapis.com/auth/spreadsheets",
-//   });
-
-//   const client = await auth.getClient();
-//   const googleSheets = google.sheets({ version: "v4", auth: client });
-//   const spreadsheetId = "12_6AF5KehrIbbwsDkc4WNA9CVfg-mwGcBJgsoo5kRdI";
-//   googleSheets.spreadsheets.values.append({
-//     auth,
-//     spreadsheetId,
-//     range: "DemoClass!A:D",
-//     valueInputOption: "USER_ENTERED",
-//     resource: {
-//       values: [
-//         ["Rajdeep", "9876543210", "rajdeepbarot23@gmail.com", "Unjha"],
-//         // [fullName.value, contactNumber.value, emailId.value, city.value]
-//       ],
-//     },
-//   });
-// };
-
-
-
-// const submitForm = async () => {
-//   const formData = {
-//     fullName: fullName.value,
-//     contactNumber: contactNumber.value,
-//     emailId: emailId.value,
-//     city: city.value,
-//   };
-
-//   try {
-//     const response = await useFetch("http://localhost:3002/democlass", {
-//       method: "POST",
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(formData),
-//     });
-
-//     if (response.ok) {
-//       console.log("Booking successful!");
-//     } else {
-//       console.log("Booking failed!");
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-
-</script>
 
 <style scoped lang="postcss">
 legend {

@@ -7,7 +7,6 @@
   <FacultyStudent class="container my-12"/>
   <InfographicFlow class="container my-12"/>
   <Achievements class="!mx-0 my-12"/>
-  <!-- <Blogs class="container my-12"/> -->
   <FAQs class="container my-12"/>
 </template>
 

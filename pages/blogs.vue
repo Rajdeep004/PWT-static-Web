@@ -16,7 +16,7 @@ const isOpens = ref([false, false, false])
 
 <template>
     <section id="blog" class="grid grid-cols-1 md:grid-cols-3 gap-2 p-4 container mx-auto">
-        <div v-for="(item,index) in blogitems" :key="item.id" class="col-span-1">
+        <div v-for="(item, index) in blogitems" :key="item.id" class="col-span-1">
             <div class="card sm:w-96 glass gap-4">
                 <figure><img src="/img/bluegirl.jpg" alt="PTE Master Course" /></figure>
                 <div class="card-body">
@@ -26,7 +26,7 @@ const isOpens = ref([false, false, false])
                     </div>
                     <!-- Assigning the modal component for each blog item -->
                     <TransitionRoot appear :show="isOpens[index]" as="template">
-                        <Dialog as="div" @close="isOpens[index]=false" class="relative z-10">
+                        <Dialog as="div" @close="isOpens[index] = false" class="relative z-10">
                             <TransitionChild as="template" enter="duration-300 ease-out" enter-from="opacity-0"
                                 enter-to="opacity-100" leave="duration-200 ease-in" leave-from="opacity-100"
                                 leave-to="opacity-0">
@@ -41,8 +41,7 @@ const isOpens = ref([false, false, false])
                                         leave-to="opacity-0 scale-95">
                                         <DialogPanel
                                             class="w-full  transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                            <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900"
-                                        >
+                                            <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
                                                 {{ item.title }}
                                             </DialogTitle>
                                             <div class="mt-2">

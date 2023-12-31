@@ -1,25 +1,18 @@
 <script setup>
-  import { ref } from 'vue'
-  import { Dialog, DialogPanel } from '@headlessui/vue'
+import { ref } from 'vue'
+import { Dialog, DialogPanel } from '@headlessui/vue'
 
-  const navigation = [
-    { name: 'Courses', href: '#' },
-    { name: 'About PTE', href: '#' },
-    { name: 'Our Achivements', href: '#' },
-    { name: 'Company', href: '#' },
-  ]
+const navigation = [
+  { name: 'Courses', href: '#' },
+  { name: 'About PTE', href: '#' },
+  { name: 'Our Achivements', href: '#' },
+  { name: 'Contact', href: '#' },
+]
 
-  const mobileMenuOpen = ref(false)
+const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-  <!-- <header>
-    <nav class="container my-4 flex items-baseline justify-between border-gray-200 px-4 py-2.5 lg:px-6">
-      <img src="/img/pwt logo.png" class="mr-3 h-8 sm:h-16" alt="PWT Logo" />
-      <a href="https://practice.ptewithtejal.com/">
-      <button class="btn">Login</button></a>
-    </nav>
-  </header> -->
   <header class="">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
@@ -38,12 +31,11 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a v-for="item in navigation" :key="item.name" :href="item.href"
-          class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+          class="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">{{ item.name }}</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <button class="btn-primary">
-        <a href="https://practice.ptewithtejal.com/" class="">Log in <span
-            aria-hidden="true">&rarr;</span></a></button>
+          <a href="https://practice.ptewithtejal.com/" class="">Log in <span aria-hidden="true">&rarr;</span></a></button>
       </div>
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -65,7 +57,7 @@
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               <a v-for="item in navigation" :key="item.name" :href="item.href"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50">{{
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer">{{
                   item.name }}</a>
             </div>
             <div class="py-6">
@@ -78,25 +70,27 @@
       </DialogPanel>
     </Dialog>
   </header>
-  <div>
-    <slot />
-  </div>
+
+  <slot />
 
   <footer class="bg-primary text-bkg">
-    <div class="footer p-10  container">
-      <nav class="">
-        <header class="footer-title">Services</header>
-        <a class="link link-hover">Branding</a>
-        <a class="link link-hover">Design</a>
-        <a class="link link-hover">Marketing</a>
-        <a class="link link-hover">Advertisement</a>
+    <div class="footer p-10 container">
+      <nav>
+        <header class="footer-title">Links</header>
+        <a 
+          class="link link-hover" 
+          v-for="item in navigation" 
+          :href="item.href"
+        >
+          {{ item.name }}
+        </a>
       </nav>
       <nav>
         <header class="footer-title">Company</header>
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Contact</a>
-        <a class="link link-hover">Jobs</a>
-        <a class="link link-hover">Press kit</a>
+        <a class="link link-hover">Promises</a>
+        <a class="link link-hover">Inquiry</a>
+        <a class="link link-hover">Results</a>
+        <a class="link link-hover">About</a>
       </nav>
       <nav>
         <header class="footer-title">Legal</header>
@@ -129,10 +123,11 @@
           </a>
           <a href="" rel="noopener noreferrer">
             <Icon name="line-md:linkedin" class="text-[1.5rem]" />
-        </a>
-      </div>
-    </form>
-  </div>
-</footer></template>
+          </a>
+        </div>
+      </form>
+    </div>
+  </footer>
+</template>
 
 <style lang="postcss"></style>

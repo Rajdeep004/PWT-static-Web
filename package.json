@@ -14,7 +14,6 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node ./server/index.js",
     "build": "nuxt build",
     "dev": "nuxt dev --host",
     "generate": "nuxt generate",
@@ -32,9 +31,6 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "googleapis": "^129.0.0",
     "nuxt-headlessui": "^1.1.4",
     "nuxt-icon": "^0.5.0"
   }
