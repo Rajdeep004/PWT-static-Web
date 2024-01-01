@@ -14,7 +14,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "NITRO_PRESET=vercel-edge nuxt build",
     "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
