@@ -1,9 +1,9 @@
 <template>
   <div class="space-y-10 bg-white p-8">
-    <div class="text-center">
+    <!-- <div class="text-center">
       <h1 class="mb-4 text-4xl font-bold">10+ Years Experince</h1>
       <span class="text-5xl font-extrabold text-accent">The Leader</span>
-    </div>
+    </div> -->
     <div class="flex flex-col sm:flex-row justify-between">
       <div class="step-card">
         <div class="step-icon">
@@ -19,10 +19,9 @@
         <div class="step-icon">
           <Icon name="fa6-solid:2" class="text-4xl" />
         </div>
-        <h2 class="mt-4 text-xl font-bold">Certified Trainer</h2>
+        <h2 class="mt-4 text-xl font-bold">10+ Years Experince</h2>
         <p>
-          Make sure you are making the right decision. Compare the available
-          choices...
+          The Leading Provider of PTE Training in India...
         </p>
       </div>
       <div class="step-card">
@@ -31,7 +30,7 @@
         </div>
         <h2 class="mt-4 text-xl font-bold">100% Satisfacation</h2>
         <p>
-          Learn through NRICH Live integrated with Learning Management System...
+          Learn through PTE with Tejal Live integrated with Learning Management System...
         </p>
       </div>
 
