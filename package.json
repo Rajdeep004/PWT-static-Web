@@ -22,17 +22,17 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtjs/tailwindcss": "^6.10.4",
     "daisyui": "^3.9.4",
-    "nuxt": "^3.7.4",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
-    "vue": "^3.3.4",
+    "nuxt": "^3.9.3",
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "vue": "^3.4.14",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "googleapis": "^129.0.0",
-    "nuxt-headlessui": "^1.1.4",
+    "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.5.0"
   }
 }
