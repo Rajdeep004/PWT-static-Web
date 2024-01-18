@@ -1,4 +1,4 @@
-import { google } from 'googlseapis';
+import { google } from 'googleapis';
 
 export default defineEventHandler (async event => {
     try {
