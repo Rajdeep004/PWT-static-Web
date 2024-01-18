@@ -1,11 +1,17 @@
 <script setup>
 const formData = {
-  fullName: "",
-  contactNumber: "",
-  emailId: "",
+  sheet: "DemoClass!A:D",
+  name: "",
+  phone: "",
+  email: "",
   city: "",
 }
-
+const submitForm = async () => {
+  await useFetch('/api/submitsheet',{
+    method: "post",
+    query: formData
+  })
+}
 // const courses = ref(["Course 1"]); 
 // Add or fetch the list of courses as needed
 </script>
@@ -16,15 +22,15 @@ const formData = {
       <h2 class="text-4xl font-bold text-bkg">Book a Demo Class</h2>
       <fieldset class="form-control">
         <legend>Full Name</legend>
-        <input v-model="formData.fullName" type="text" placeholder="Full Name" required class="rounded bg-white p-2" />
+        <input v-model="formData.name" type="text" placeholder="Full Name" required class="rounded bg-white p-2" />
       </fieldset>
       <fieldset class="form-control">
         <legend>Contact Number</legend>
-        <input v-model="formData.contactNumber" type="tel" placeholder="98765 43210" required class="rounded bg-white p-2" />
+        <input v-model="formData.phone" type="tel" placeholder="98765 43210" required class="rounded bg-white p-2" />
       </fieldset>
       <fieldset class="form-control">
         <legend>Email Address</legend>
-        <input v-model="formData.emailId" type="email" placeholder="ptewithtejal@gmail.com" required
+        <input v-model="formData.email" type="email" placeholder="ptewithtejal@gmail.com" required
           class="rounded bg-white p-2" />
       </fieldset>
       <fieldset class="form-control">
@@ -40,7 +46,7 @@ const formData = {
           </option>
         </select>
       </fieldset> -->
-      <button type="submit" class="btn !bg-bkg !text-text" @submit="submitForm">
+      <button type="submit" class="btn !bg-bkg !text-text" @submit.prvent="submitForm" >
         BOOK NOW
       </button>
     </form>
