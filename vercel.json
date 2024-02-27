@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/.nuxt/index.html"
+        "dest": "/dist/index.html"
       }
     ]
   }
