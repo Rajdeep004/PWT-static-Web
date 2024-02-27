@@ -1,6 +1,6 @@
 <script setup>
 const formData = {
-  sheet: "DemoClass!A:D",
+  sheet: "DemoClass",
   name: "",
   phone: "",
   email: "",
