@@ -1,5 +1,6 @@
 import { google } from 'googleapis';
 
+const runtimeConfig = useRuntimeConfig()
 export default defineEventHandler(async (event) => {
   try {
     // Extract request parameters
@@ -13,7 +14,10 @@ export default defineEventHandler(async (event) => {
 
     // Authenticate with Google Sheets
     const auth = new google.auth.GoogleAuth({
-      keyFile: "credentials.json", // Ensure credentials.json is present in the function directory
+      credentials: {
+        client_email: runtimeConfig.GOOGLE_CLIENT_EMAIL,
+        private_key: runtimeConfig.GOOGLE_PRIVATE_KEY,
+      },
       scopes: "https://www.googleapis.com/auth/spreadsheets",
     });
     const client = await auth.getClient();
