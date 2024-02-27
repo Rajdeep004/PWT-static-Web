@@ -1,6 +1,18 @@
 import { google } from 'googleapis';
 
 const runtimeConfig = useRuntimeConfig()
+// Authenticate with Google Sheets
+const auth = new google.auth.GoogleAuth({
+  credentials: {
+    client_email: runtimeConfig.GOOGLE_CLIENT_EMAIL,
+    private_key: runtimeConfig.GOOGLE_PRIVATE_KEY,
+  },
+  scopes: "https://www.googleapis.com/auth/spreadsheets",
+});
+const client = await auth.getClient();
+const googleSheets = google.sheets({ version: "v4", auth: client });
+const spreadsheetId = "12_6AF5KehrIbbwsDkc4WNA9CVfg-mwGcBJgsoo5kRdI";
+
 export default defineEventHandler(async (event) => {
   try {
     // Extract request parameters
@@ -12,17 +24,7 @@ export default defineEventHandler(async (event) => {
       query.city || query.message,
     ]
 
-    // Authenticate with Google Sheets
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: runtimeConfig.GOOGLE_CLIENT_EMAIL,
-        private_key: runtimeConfig.GOOGLE_PRIVATE_KEY,
-      },
-      scopes: "https://www.googleapis.com/auth/spreadsheets",
-    });
-    const client = await auth.getClient();
-    const googleSheets = google.sheets({ version: "v4", auth: client });
-    const spreadsheetId = "12_6AF5KehrIbbwsDkc4WNA9CVfg-mwGcBJgsoo5kRdI";
+    
     const range = query.sheet; 
     // Append data to Google Sheets
     await googleSheets.spreadsheets.values.append({
