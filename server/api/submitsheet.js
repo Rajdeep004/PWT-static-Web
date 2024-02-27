@@ -15,7 +15,7 @@ export default defineEventHandler( event => {
     const doc = new GoogleSpreadsheet('12_6AF5KehrIbbwsDkc4WNA9CVfg-mwGcBJgsoo5kRdI', serviceAccountAuth);
 
     // Load document info
-    await doc.loadInfo();
+    doc.loadInfo();
     // Extract request parameters
     const query = getQuery(event)
     // Select the appropriate sheet 
@@ -29,7 +29,7 @@ export default defineEventHandler( event => {
     ]
 
     // Append data as a new row
-    await sheet.addRow(formData);
+    sheet.addRow(formData);
 
     return {
       res: formData
