@@ -1,13 +1,13 @@
 <script setup>
 const formData = {
-  sheet: "DemoClass",
   name: "",
   phone: "",
   email: "",
   city: "",
+  cretedAt: new Date(Date.now()).toLocaleString()
 }
 const submitForm = async () => {
-  await useFetch('/api/submitsheet',{
+  await useFetch('https://hook.eu2.make.com/qigv24cy0r115mbb3f08bxrgwrsqgrig',{
     method: "post",
     query: formData
   })
