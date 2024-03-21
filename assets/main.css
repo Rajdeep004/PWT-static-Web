@@ -19,6 +19,10 @@ body {
   @apply text-lg text-gray-500 hover:text-gray-900 dark:hover:text-white md:text-2xl;
 }
 
+.basicanimation{
+  @apply transition-all ease-in duration-150;
+}
+
 .h1 {
   @apply text-5xl font-extrabold dark:text-white;
 }

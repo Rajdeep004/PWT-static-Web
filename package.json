@@ -33,10 +33,8 @@
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
-    "google-auth-library": "^9.6.3",
-    "google-spreadsheet": "^4.1.1",
-    "node-cache": "^5.1.2",
     "nuxt-headlessui": "^1.1.5",
-    "nuxt-icon": "^0.5.0"
+    "nuxt-icon": "^0.5.0",
+    "nuxt-swiper": "^1.2.2"
   }
 }

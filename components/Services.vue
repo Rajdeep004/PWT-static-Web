@@ -38,31 +38,26 @@ const items = ref([
     description:
       "Social Media is not a distraction, it is a learning experience.",
     icon: "/img/services/PTE Guide.svg",
-  },
-  {
-    title: "One More",
-    description:
-      "Some description",
-    icon: "/"
   }
 ]);
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-    <h2 class="mb-6 text-5xl font-bold text-primary flex flex-col justify-center items-center">
+  <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+    <h2 class="mb-6 text-5xl font-bold text-primary flex flex-col justify-center items-center items-sp">
       Services at <div class="text-accent h2">PTE with Tejal</div>
     </h2>
     <div
       v-for="item in items"
       :key="item.title"
-      class="card"
+      class="card hover:scale-105 basicanimation"
     >
       <img :src="item.icon" alt="Item Icon" class="mb-4 h-12 w-12" />
       <h3 class="mb-2 text-xl font-semibold">{{ item.title }}</h3>
       <p class="text">{{ item.description }}</p>
     </div>
   </div>
+  
 </template>
 
 <style scoped>

@@ -5,14 +5,16 @@
 <template>
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold">Inquiry now!</h1>
-        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.
-          In deleniti eaque aut repudiandae et a id nisi.</p>
-      </div>
-      <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-        <form class="card-body">
-          <h1 class="text-5xl font-bold mb-8">Inquiry Now!</h1>
+      <div class="card shrink-0 w-full max-w-4xl shadow-2xl bg-base-100 flex flex-col lg:flex-row">
+        <div class="card-body items-center justify-center gap-8">
+          <img src="/img/pwt logo.png" alt="PWT Logo" class="w-48"/>
+          <div>
+            <h3 class="h3 text-center text-primary">Any Queries??</h3>
+            <h6 class="h5 text-center text-accent ">Let us know</h6>
+          </div>
+        </div>
+        <form class="card-body lg:w-1/2">
+          <h1 class="h1 mb-8">Inquiry Now!</h1>
           <div class="form-control">
             <label class="label">
               <span class="label-text">Full Name</span>
@@ -23,13 +25,13 @@
             <label class="label">
               <span class="label-text">Email</span>
             </label>
-            <input type="email" placeholder="user@email.com" class="input input-bordered" required />
+            <input type="email" placeholder="user@email.com" class="input input-bordered" inputmode="email" required />
           </div>
           <div class="form-control">
             <label class="label">
               <span class="label-text">Contact Number</span>
             </label>
-            <input type="tel" placeholder="+91 9123456789" class="input input-bordered" required />
+            <input type="tel" placeholder="+91 9123456789" class="input input-bordered" inputmode="numeric" required />
           </div>
           <div class="form-control">
             <label class="label">
@@ -38,7 +40,7 @@
             <textarea type="text" placeholder="Ask doubts" class="input input-bordered resize-none" cols="40" required />
           </div>
           <div class="form-control mt-6 flex items-center">
-            <button class="btn btn-primary !w-full">Submit</button>
+            <button class="btn btn-primary !w-full basicanimation">Submit</button>
           </div>
         </form>
       </div>
