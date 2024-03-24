@@ -4,7 +4,7 @@
   <Hero class="container my-"/>
   <Demo class="!mx-0 my-12"/>
   <Services class="container my-20 mx-auto"/>
-  <!-- <WallofFame class="container mx-auto my-28"/> -->
+  <WallofFame class="container mx-auto my-28"/>
   <FacultyStudent class="container my-12"/>
   <InfographicFlow class="container my-12"/>
   <Achievements class="!mx-0 my-12"/>

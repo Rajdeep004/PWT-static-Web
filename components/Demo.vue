@@ -1,16 +1,24 @@
 <script setup>
-const formData = {
+const formData = ref({
   name: "",
   phone: "",
   email: "",
   city: "",
   cretedAt: new Date(Date.now()).toLocaleString()
-}
+})
 const submitForm = async () => {
-  await useFetch('https://hook.eu2.make.com/qigv24cy0r115mbb3f08bxrgwrsqgrig',{
+  await useFetch('https://hook.eu2.make.com/qigv24cy0r115mbb3f08bxrgwrsqgrig', {
     method: "post",
     query: formData
-  })
+  });
+  alert("Demo Class Booked! ");
+  Object.assign(formData.value, {
+    name: "",
+    phone: "",
+    email: "",
+    city: "",
+    createdAt: new Date(Date.now()).toLocaleString() 
+  });
 }
 // const courses = ref(["Course 1"]); 
 // Add or fetch the list of courses as needed
@@ -46,10 +54,11 @@ const submitForm = async () => {
           </option>
         </select>
       </fieldset> -->
-      <button type="submit" class="btn !bg-bkg !text-text" @submit.prvent="submitForm" >
+      <button type="submit" class="btn !bg-bkg !text-text" @submit.prvent="submitForm">
         BOOK NOW
       </button>
     </form>
+
   </div>
 </template>
 

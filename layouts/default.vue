@@ -1,7 +1,6 @@
 <script setup>
 import { SpeedInsights } from '@vercel/speed-insights/vue';
 
-import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 
 const navigation = [
@@ -9,6 +8,7 @@ const navigation = [
   { name: 'About PTE', href: '#' },
   { name: 'Our Achivements', href: '#' },
   { name: 'Contact', href: '#' },
+  { name: 'Inquiry', href: '/inquiry' }
 ]
 
 const mobileMenuOpen = ref(false)
@@ -19,7 +19,7 @@ const mobileMenuOpen = ref(false)
   <header class="">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
           <img class="h-8 sm:h-12 w-auto" src="/img/pwt logo.png" alt="" />
         </a>
@@ -29,19 +29,18 @@ const mobileMenuOpen = ref(false)
           @click="mobileMenuOpen = true">
           <span class="sr-only">Open main menu</span>
           <Icon name="material-symbols:menu" class="h-6 w-6" aria-hidden="true" />
-          <!-- <Bars3Icon class="h-6 w-6" aria-hidden="true" /> -->
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a v-for="item in navigation" :key="item.name" :href="item.href"
-          class="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">{{ item.name }}</a>
+        <NuxtLink v-for="item in navigation" :key="item.name" :to="item.href"
+          class="text-sm font-semibold leading-6 text-gray-900 cursor-pointer">{{ item.name }}</NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <button class="btn-primary">
           <a href="https://practice.ptewithtejal.com/" class="">Log in <span aria-hidden="true">&rarr;</span></a></button>
       </div>
     </nav>
-    <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+    <!-- <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-50" />
       <DialogPanel
         class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -53,15 +52,14 @@ const mobileMenuOpen = ref(false)
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
             <Icon name="material-symbols:close-rounded" class="h-6 w-6" aria-hidden="true" />
-            <!-- <XMarkIcon class="h-6 w-6" aria-hidden="true" /> -->
           </button>
         </div>
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a v-for="item in navigation" :key="item.name" :href="item.href"
+              <NuxtLink v-for="item in navigation" :key="item.name" :to="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer">{{
-                  item.name }}</a>
+                  item.name }}</NuxtLink>
             </div>
             <div class="py-6">
               <a href="#"
@@ -71,7 +69,7 @@ const mobileMenuOpen = ref(false)
           </div>
         </div>
       </DialogPanel>
-    </Dialog>
+    </Dialog> -->
   </header>
 
   <slot />
@@ -80,11 +78,7 @@ const mobileMenuOpen = ref(false)
     <div class="footer p-10 container">
       <nav>
         <header class="footer-title">Links</header>
-        <a 
-          class="link link-hover" 
-          v-for="item in navigation" 
-          :href="item.href"
-        >
+        <a class="link link-hover" v-for="item in navigation" :href="item.href">
           {{ item.name }}
         </a>
       </nav>
@@ -130,7 +124,6 @@ const mobileMenuOpen = ref(false)
         </div>
       </form>
     </div>
-  </footer>
-</template>
+</footer></template>
 
 <style lang="postcss"></style>
