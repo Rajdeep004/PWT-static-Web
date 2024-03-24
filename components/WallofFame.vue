@@ -5,15 +5,29 @@ const images = [];
 for (let i=1; i <= RESULT_COUNT; i++){
     images.push(`/img/WOF/${i}.png`)
 }
+const slidesPerView = computed(() => {
+  if (process.client) { // Check if we're on the client
+    const width = window.innerWidth;
+    if (width >= 1024) {
+      return 4; 
+    } else if (width >= 768) {
+      return 3;
+    } else {
+      return 1; 
+    }
+  } else {
+    return 1; // Default for SSR
+  }
+});
 </script>
 
 <template>
-    <section class="container mx-auto">
+    <section class="container mx-auto flex flex-col items-center justify-center">
         <h2 class="h2 text-center mb-8">Wall of Fame</h2>
         <Swiper 
             :modules="[SwiperAutoplay, SwiperNavigation, SwiperPagination]"
             :space-between="24" 
-            :slides-per-view="4" 
+            :slides-per-view="slidesPerView" 
             :loop="true" 
             :autoplay="{
                 delay: 2000,
@@ -27,9 +41,8 @@ for (let i=1; i <= RESULT_COUNT; i++){
                 nextEl: '.next',
                 prevEl: '.prev'
             }"
-            class=" max-w-6xl relative"
+            class="max-w-lg lg:max-w-6xl relative flex spa"
         >
-            <Icon name="tabler:square-rounded-chevron-left-filled" class="text-black prev text-4xl" />
             <SwiperSlide v-for="path in images" :key="path">
                 <img 
                     :src="path" 
@@ -37,10 +50,11 @@ for (let i=1; i <= RESULT_COUNT; i++){
                     class="shadow-lg"
                 />
             </SwiperSlide> 
-            <Icon name="tabler:square-rounded-chevron-right-filled" class="text-black next text-4xl" />  
+            <div class="flex justify-between w-full z-20 absolute !bottom-[50%]">
+                <Icon name="tabler:square-rounded-chevron-left-filled" class="text-black prev text-4xl" />
+                <Icon name="tabler:square-rounded-chevron-right-filled" class="text-black next text-4xl" />
+            </div>
         </Swiper>
-        <div id="swiper-pagination"/>
+        <div class="flex"><div id="swiper-pagination"/></div>
     </section>
 </template>
-
-<style scoped lang="postcss"></style>
