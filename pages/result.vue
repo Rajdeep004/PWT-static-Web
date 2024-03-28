@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
 const createRepeatedObjects = (folder, nums) => {
@@ -18,19 +17,19 @@ const createRepeatedObjects = (folder, nums) => {
     return objects;
 }
 
-const categories = ref({
-    "86 to 90": createRepeatedObjects("86 to 90", 2),
-    "83 to 85": createRepeatedObjects("83 to 85", 0),
+const categories = {
+    "83 to 90": createRepeatedObjects("86 to 90", 2),
+    // "83 to 85": createRepeatedObjects("83 to 85", 0),
     "79 to 82": createRepeatedObjects("79 to 82", 1),
     "73 to 78": createRepeatedObjects("73 to 78", 3),
     "65 to 72": createRepeatedObjects("65 to 72", 34),
-    "58 to 65": createRepeatedObjects("58 to 65", 120),
+    "58 to 64": createRepeatedObjects("58 to 64", 120),
     "50 to 57": createRepeatedObjects("50 to 57", 173),
-})
+}
 </script>
 
 <template>
-    <div class="w-full max-w-4xl px-2 py-16 sm:px-0 container">
+    <div class="w-full max-w-5xl 2xl:max-w-7xl px-2 py-16 sm:px-0 container">
         <TabGroup>
             <TabList class="flex space-x-1 rounded-xl bg-primary/80 p-1">
                 <Tab v-for="category in Object.keys(categories)" as="template" :key="category" v-slot="{ selected }">
@@ -51,7 +50,19 @@ const categories = ref({
                     'rounded-xl bg-white p-3',
                     'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                 ]">
-                    <div class="carousel w-full">
+                    <section class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6">
+                        <div :id="post.curr" class="carousel-item relative w-full" v-for="post in gallery" :key="post.id">
+                            <img :src="post.path" alt="Result Image" class=""/>
+                        </div>
+                    </section>
+                </TabPanel>
+            </TabPanels>
+        </TabGroup>
+    </div>
+</template>
+
+
+<!-- <div class="carousel w-full">
                         <div :id="post.curr" class="carousel-item relative w-full" v-for="post in gallery" :key="post.id">
                             <img :src="post.path" alt="Result Image" />
                             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -59,9 +70,4 @@ const categories = ref({
                                 <a :href="post.next" class="btn btn-circle">❯</a>
                             </div>
                         </div>
-                    </div>
-                </TabPanel>
-            </TabPanels>
-        </TabGroup>
-    </div>
-</template>
+                    </div> -->

@@ -20,7 +20,7 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <div class="hero min-h-screen bg-base-200">
+  <section class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
       <div class="card shrink-0 w-full max-w-4xl shadow-2xl bg-base-100 flex flex-col lg:flex-row">
         <div class="card-body items-center justify-center gap-8">
@@ -62,6 +62,6 @@ const submitForm = async () => {
         </form>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 

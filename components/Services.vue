@@ -43,8 +43,8 @@ const items = ref([
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
-    <h2 class="mb-6 text-5xl font-bold text-primary flex flex-col justify-center items-center items-sp">
+  <div class="grid grid-cols-2 gap-6 md:grid-cols-4 px-4">
+    <h2 class="mb-6 text-4xl lg:text-5xl font-bold text-primary flex flex-col justify-center items-center">
       Services at <div class="text-accent h2">PTE with Tejal</div>
     </h2>
     <div

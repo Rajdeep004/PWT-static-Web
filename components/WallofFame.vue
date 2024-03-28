@@ -22,7 +22,7 @@ const slidesPerView = computed(() => {
 </script>
 
 <template>
-    <section class="container mx-auto flex flex-col items-center justify-center">
+    <section id="wof" class="container mx-auto flex flex-col items-center justify-center">
         <h2 class="h2 text-center mb-8">Wall of Fame</h2>
         <Swiper 
             :modules="[SwiperAutoplay, SwiperNavigation, SwiperPagination]"
