@@ -6,31 +6,25 @@
     </div> -->
     <div class="flex flex-col sm:flex-row justify-between">
       <div class="step-card">
-        <div class="step-icon">
-          <Icon name="fa6-solid:1" class="text-4xl" />
-        </div>
-        <h2 class="mt-4 text-xl font-bold">Certified Trainer</h2>
+          <img src="/img/bedge 4.png" alt="" class="object-contain w-20" />
+        <h4 class="h4 text-primary mt-4 text-xl font-bold">Certified Trainer</h4>
         <p>
           Visit our Directory page to search for any resources related to your
-          learning needs...
+          learning needs
         </p>
       </div>
       <div class="step-card">
-        <div class="step-icon">
-          <Icon name="fa6-solid:2" class="text-4xl" />
-        </div>
-        <h2 class="mt-4 text-xl font-bold">10+ Years Experince</h2>
+        <img src="/img/bedge 2.png" alt="" class="object-contain w-20" />
+        <h4 class="h4 text-primary mt-4 text-xl font-bold">12+ Years Experince</h4>
         <p>
-          The Leading Provider of PTE Training in India...
+          The Leading Provider of PTE Training in India
         </p>
       </div>
       <div class="step-card">
-        <div class="step-icon">
-          <Icon name="fa6-solid:3" class="text-4xl" />
-        </div>
-        <h2 class="mt-4 text-xl font-bold">100% Satisfacation</h2>
+        <img src="/img/bedge 1.png" alt="" class="object-contain w-20" />
+        <h4 class="h4 text-primary mt-4 text-xl font-bold">100% Satisfacation</h4>
         <p>
-          Learn through PTE with Tejal Live integrated with Learning Management System...
+          Learn through PTE with Tejal Live integrated with Learning Management System
         </p>
       </div>
 
@@ -60,9 +54,5 @@
 <style scoped lang="postcss">
 .step-card {
   @apply flex w-3/4 sm:w-[30%] flex-col items-center justify-center space-y-2 mx-auto gap-4;
-}
-
-.step-icon {
-  @apply h-16 w-16 rounded-full bg-primary p-4 text-white;
 }
 </style>

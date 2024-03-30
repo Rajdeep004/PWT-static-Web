@@ -53,7 +53,7 @@ const mobileMenuOpen = ref(false);
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <button class="btn-primary">
           <a href="https://practice.ptewithtejal.com/" class=""
-            >Log in <span aria-hidden="true">&rarr;</span></a
+            >Log in <Icon name="line-md:arrow-right" class="text-xl"/></a
           >
         </button>
       </div>
@@ -102,7 +102,7 @@ const mobileMenuOpen = ref(false);
               <a
                 href="#"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Log in</a
+                >Log in <Icon name="line-md:arrow-right" class="text-xl"/></a
               >
             </div>
           </div>
