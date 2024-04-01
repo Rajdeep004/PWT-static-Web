@@ -30,11 +30,11 @@ const team = [
 <template>
   <section>
     <div class="bg-gray-50 py-2 dark:bg-gray-800 flex">
-      <div class="w-2/12 bg-primary text-white inline-flex items-center justify-center">
+      <div class="hidden w-2/12 bg-primary text-white lg:inline-flex items-center justify-center">
           <h2 class="h1 mb-4 text-center -rotate-90 w-full ">Our Team</h2>
         </div>
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
-        
+        <h2 class="lg:hidden h1 text-center my-12">Our Team</h2>
         <div class="grid items-center gap-y-12 md:grid-cols-3">
           <div v-for="member in team" class="space-y-4 text-center">
             <img

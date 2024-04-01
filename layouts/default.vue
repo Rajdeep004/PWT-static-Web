@@ -123,10 +123,11 @@ const mobileMenuOpen = ref(false);
       </nav>
       <nav>
         <header class="footer-title">Company</header>
-        <a class="link-hover link">Promises</a>
-        <a class="link-hover link">Inquiry</a>
-        <a class="link-hover link">Results</a>
-        <a class="link-hover link">About</a>
+        <NuxtLink class="link-hover link" to="/contact">Promises</NuxtLink>
+        <NuxtLink class="link-hover link" to="/inquiry">Inquiry</NuxtLink>
+        <NuxtLink class="link-hover link" to="/result">Results</NuxtLink>
+        <NuxtLink class="link-hover link" to="/about">About</NuxtLink>
+
       </nav>
       <nav>
         <header class="footer-title">Legal</header>
