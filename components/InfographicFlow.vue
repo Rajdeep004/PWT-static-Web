@@ -27,9 +27,8 @@
           Learn through PTE with Tejal Live integrated with Learning Management System
         </p>
       </div>
-
     </div>
-    <div class="stats shadow container mt-8">
+    <!-- <div class="stats shadow container mt-8">
       <div class="stat place-items-center">
         <div class="stat-title">Downloads</div>
         <div class="stat-value text-primary">31K</div>
@@ -47,7 +46,7 @@
         <div class="stat-value text-primary">1,200</div>
         <div class="stat-desc">↘︎ 90 (14%)</div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
