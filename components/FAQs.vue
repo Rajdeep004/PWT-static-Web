@@ -53,6 +53,7 @@ const faqs = [
     <div class="mx-auto w-full rounded-2xl bg-white p-4 mt-8 space-y-2">
       <div v-for="faq in faqs" :key="faq.question" class="h4 transition-all flex flex-col gap-4">
         <Disclosure v-slot="{ open }">
+          <div>
           <DisclosureButton
             class="flex w-full justify-between rounded-lg bg-[#dbe3f0] px-4 py-2 text-left text-sm font-medium text-primary hover:bg-[#b7c6e1] focus:outline-none focus-visible:ring focus-visible:ring-primary/75">
             <span>{{ faq.question }}</span>
@@ -61,7 +62,7 @@ const faqs = [
           </DisclosureButton>
           <DisclosurePanel class="px-4 pb-2 pt-4 font-normal text-sm text-text rounded-lg bg-[#edf1f7]">
             {{ faq.answer }}
-          </DisclosurePanel>
+          </DisclosurePanel></div>
         </Disclosure>
       </div>
     </div>

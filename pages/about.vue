@@ -28,33 +28,28 @@ const team = [
 </script>
 
 <template>
-  <section>
-    <div class="bg-gray-50 py-2 dark:bg-gray-800 flex">
-      <div class="hidden w-2/12 bg-primary text-white lg:inline-flex items-center justify-center">
-          <h2 class="h1 mb-4 text-center -rotate-90 w-full ">Our Team</h2>
-        </div>
-      <div class="container mx-auto px-6 md:px-12 xl:px-32">
-        <h2 class="lg:hidden h1 text-center my-12">Our Team</h2>
-        <div class="grid items-center gap-y-12 md:grid-cols-3">
-          <div v-for="member in team" class="space-y-4 text-center">
-            <img
-              class="mx-auto h-64 w-64 rounded-xl bg-[#e0e0de] object-cotain md:h-40 md:w-40 lg:h-40 lg:w-40"
-              :src="`/img/Team/${member.Name}.png`"
-              :alt="member.Name"
-              loading="lazy"
-              width="640"
-              height="805"
-              draggable="false"
-            />
-            <div class="">
-              <h4 class="text-2xl text-gray-700 dark:text-white">
-                {{ member.Name }}
-              </h4>
-              <span class="block text-sm text-gray-500">
-                {{ member.Designation }}
-              </span>
-            </div>
-          </div>
+  <section class="default_cursor_cs py-32">
+    <div class="default_cursor_cs mx-auto max-w-6xl px-8 lg:px-0">
+      <h2 class="default_cursor_cs h1 mb-12 text-primary">Our Team</h2>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+        <div
+          v-for="member in team"
+          class="bg-ui rounded-card border p-1 shadow shadow-gray-950/5"
+        >
+          <img
+            class="default_cursor_cs basicanimation aspect-square rounded-xl bg-red-50 object-contain"
+            :src="`/img/Team/${member.Name}.png`"
+            :alt="member.Name"
+            height="460"
+            width="460"
+            loading="lazy"
+          />
+          <span class="h5 block px-1 pb-0.5 pt-1.5 text-xs text-accent"
+            >{{ member.Name }}
+            <span class="h6 text-primary">
+              - {{ member.Designation }}</span
+            ></span
+          >
         </div>
       </div>
     </div>

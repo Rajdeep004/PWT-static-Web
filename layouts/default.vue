@@ -6,7 +6,7 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 const navigation = [
   // { name: 'Courses', href: '#' },
   { name: "About PTE", href: "/about" },
-  { name: "Our Achivements", href: "/result" },
+  { name: "Our Achivements", href: "/#wof" },
   { name: "Contact", href: "/contact" },
   { name: "Inquiry", href: "/inquiry" },
 ];
@@ -53,8 +53,8 @@ const mobileMenuOpen = ref(false);
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <button class="btn-primary">
           <a href="https://practice.ptewithtejal.com/" class=""
-            >Log in <Icon name="line-md:arrow-right" class="text-xl"/></a
-          >
+            >Log in <Icon name="line-md:arrow-right" class="text-xl"
+          /></a>
         </button>
       </div>
     </nav>
@@ -102,8 +102,8 @@ const mobileMenuOpen = ref(false);
               <a
                 href="#"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Log in <Icon name="line-md:arrow-right" class="text-xl"/></a
-              >
+                >Log in <Icon name="line-md:arrow-right" class="text-xl"
+              /></a>
             </div>
           </div>
         </div>
@@ -113,75 +113,101 @@ const mobileMenuOpen = ref(false);
 
   <NuxtPage />
 
-  <footer class="bg-primary text-bkg">
-    <div class="container footer p-10">
-      <nav>
-        <header class="footer-title">Links</header>
-        <a class="link-hover link" v-for="item in navigation" :href="item.href">
-          {{ item.name }}
-        </a>
-      </nav>
-      <nav>
-        <header class="footer-title">Company</header>
-        <NuxtLink class="link-hover link" to="/contact">Promises</NuxtLink>
-        <NuxtLink class="link-hover link" to="/inquiry">Inquiry</NuxtLink>
-        <NuxtLink class="link-hover link" to="/result">Results</NuxtLink>
-        <NuxtLink class="link-hover link" to="/about">About</NuxtLink>
+  <footer class="bg-gray-100">
+    <div
+      class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+    >
+      <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+        <a
+          class="group inline-block rounded-full bg-primary p-2 text-white shadow-sm ring-primary transition hover:bg-bkg hover:ring-2 sm:p-3 lg:p-4"
+          href="#MainContent"
+        >
+          <span class="sr-only">Back to top</span>
 
-      </nav>
-      <nav>
-        <header class="footer-title">Legal</header>
-        <a class="link-hover link">Terms of use</a>
-        <a class="link-hover link">Privacy policy</a>
-        <a class="link-hover link">Cookie policy</a>
-      </nav>
-      <form>
-        <header class="footer-title">Newsletter</header>
-        <fieldset class="form-control w-80">
-          <label class="label">
-            <span class="">Enter your email address</span>
-          </label>
-          <div class="join">
-            <input
-              type="text"
-              placeholder="username@site.com"
-              class="input join-item input-bordered"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-5 fill-bkg group-hover:fill-primary"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
             />
-            <button
-              class="join-item h-12 w-24 border-l-2 bg-bkg text-accent hover:bg-accent hover:text-bkg"
-            >
-              Subscribe
-            </button>
+          </svg>
+        </a>
+      </div>
+
+      <div class="lg:flex lg:items-end lg:justify-between">
+        <div>
+          <div class="flex justify-center text-teal-600 lg:justify-start">
+            <a href="/" class="-m-1.5 p-1.5">
+              <span class="sr-only">PTE with Tejal</span>
+              <img class="h-12 w-auto" src="/img/pwt logo.png" alt="" />
+            </a>
           </div>
-        </fieldset>
-        <header class="footer-title">Social</header>
-        <div class="grid grid-flow-col gap-4 text-bkg">
-          <a
-            href="https://www.instagram.com/ptewithtejal/?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <div
+            class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
           >
-            <Icon name="line-md:instagram" class="text-[1.5rem]" />
-          </a>
-          <a
-            href="https://www.facebook.com/ptewithtejal/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="line-md:facebook" class="text-[1.5rem]" />
-          </a>
-          <a
-            href="https://www.youtube.com/@ptewithtejal"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="line-md:youtube" class="text-[1.5rem]" />
-          </a>
-          <a href="" rel="noopener noreferrer">
-            <Icon name="line-md:linkedin" class="text-[1.5rem]" />
-          </a>
+            <div class="grid grid-flow-col gap-4 text-bkg">
+              <a
+                href="https://www.instagram.com/ptewithtejal/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  name="line-md:instagram"
+                  class="basicanimation text-[1.5rem] text-primary hover:scale-110"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/ptewithtejal/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  name="line-md:facebook"
+                  class="basicanimation text-[1.5rem] text-primary hover:scale-110"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/@ptewithtejal"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  name="line-md:youtube"
+                  class="basicanimation text-[1.5rem] text-primary hover:scale-110"
+                />
+              </a>
+              <a href="" rel="noopener noreferrer">
+                <Icon
+                  name="line-md:linkedin"
+                  class="basicanimation text-[1.5rem] text-primary hover:scale-110"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-      </form>
+
+        <ul
+          class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
+        >
+          <NuxtLink
+            v-for="item in navigation"
+            :key="item.name"
+            :to="item.href"
+            @click="mobileMenuOpen = false"
+            class="-mx-3 block cursor-pointer rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-50"
+            >{{ item.name }}</NuxtLink
+          >
+        </ul>
+      </div>
+
+      <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">
+        Copyright &copy; 2025. Created by Pixiophile Solutions Pvt. Ltd.
+      </p>
     </div>
   </footer>
 </template>

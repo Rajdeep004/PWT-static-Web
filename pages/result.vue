@@ -13,6 +13,8 @@ const createRepeatedObjects = (folder, nums) => {
             next: i === nums ? `#slide1` : `#slide${i + 1}`,
         });
     }
+    console.log(objects);
+    
 
     return objects;
 }
@@ -31,6 +33,7 @@ const categories = {
 <template>
     <div class="w-full max-w-5xl 2xl:max-w-7xl px-2 py-16 sm:px-0 container">
         <TabGroup>
+            <div>
             <TabList class="flex space-x-1 rounded-xl bg-primary/80 p-1">
                 <Tab v-for="category in Object.keys(categories)" as="template" :key="category" v-slot="{ selected }">
                     <button :class="[
@@ -56,7 +59,7 @@ const categories = {
                         </div>
                     </section>
                 </TabPanel>
-            </TabPanels>
+            </TabPanels></div>
         </TabGroup>
     </div>
 </template>
